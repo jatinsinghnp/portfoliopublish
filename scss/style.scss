@@ -25,6 +25,12 @@ body {
 }
 
 #main-header {
+  #active {
+    display: none;
+  }
+  #times {
+    display: none;
+  }
   ul {
     display: flex;
     align-items: flex-end;
@@ -55,7 +61,7 @@ body {
     margin-top: 10rem;
     margin-bottom: 3rem;
     .text {
-      width: 510px;
+      max-width: 31.875rem;
 
       font-size: medium;
       h1 {
@@ -92,6 +98,7 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 0 7rem;
   }
   .card-wrapper {
@@ -102,9 +109,9 @@ body {
     justify-content: center;
     .card {
       background: var(--color-main);
-      margin: auto;
+      margin: 0 auto;
       height: 295px;
-      width: 418px;
+      max-width: 26.125rem;
       font-size: medium;
       font-weight: 400;
       h1 {
@@ -128,7 +135,7 @@ body {
   .card {
     display: flex;
     p {
-      width: 594px;
+      max-width: 594px;
     }
     .text-content {
       margin: 0 3rem;
@@ -141,19 +148,19 @@ body {
           display: flex;
           background: #142850;
           border-radius: 0.5rem;
-          width: 60px;
+          max-width: 60px;
           color: #f3f3ff;
         }
       }
     }
     img {
-      width: 246px;
+      max-width: 246px;
       object-fit: cover;
     }
   }
 }
 footer {
-  width: 1152px;
+  max-width: 1152px;
   height: 182px;
   font-size: 14px;
   font-weight: 500;
@@ -172,6 +179,149 @@ footer {
       list-style: none;
       padding: 30px;
       font-size: 2rem;
+    }
+  }
+}
+
+// media query
+
+@media screen and (max-width: 400px) {
+  #main-header {
+    max-width: 25rem;
+    #active {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+    }
+
+    #times {
+      display: block;
+    }
+    #disable {
+      display: none;
+      align-items: flex-end;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      flex-direction: column;
+      li {
+        margin-top: 1rem;
+        list-style: none;
+        padding: 0 57px;
+
+        a {
+          color: #000;
+          text-decoration: none;
+          &:hover {
+            background: #000;
+            color: #ffff;
+          }
+        }
+      }
+    }
+
+    #navwrapper {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      margin-left: 3rem;
+      .text {
+        max-width: 31.875rem;
+
+        font-size: medium;
+        h1 {
+          padding: 1rem 0;
+        }
+        p {
+          padding: 1rem 0;
+        }
+        .cta {
+          width: 208px;
+          background: var(--primary-color);
+          color: #ffffff;
+          padding: 10px;
+          border-radius: 1em;
+        }
+      }
+
+      img {
+        border-radius: 10rem;
+        margin-left: 0;
+        object-fit: cover;
+        padding: 1rem;
+      }
+    }
+  }
+
+  .posts {
+    background: #edf7fa;
+    display: grid;
+    grid-template-rows: minmax(2, 1fr);
+    grid-gap: 1rem;
+    max-width: 25rem;
+    min-height: 40.438rem;
+    span {
+      height: 5px;
+    }
+    .heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 0 7rem;
+      a {
+        display: none;
+      }
+    }
+    .card-wrapper {
+      display: flex;
+      height: 396px;
+      flex-direction: column;
+
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  #feture-box {
+    display: flex;
+    flex-direction: column;
+    max-width: 25rem;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0;
+
+      justify-content: center;
+      align-items: center;
+
+      p {
+        max-width: 594px;
+        margin-left: 0;
+      }
+      .text-content {
+        margin: 0 3rem;
+        .title {
+          display: inline-flex;
+
+          .sub-title {
+            padding: 0.2rem;
+
+            display: flex;
+            background: #142850;
+            border-radius: 0.5rem;
+            max-width: 60px;
+            color: #f3f3ff;
+          }
+        }
+      }
+      img {
+        max-width: 339px;
+        object-fit: cover;
+      }
     }
   }
 }

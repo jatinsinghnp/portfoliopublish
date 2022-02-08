@@ -17,10 +17,12 @@
   </head>
   <body>
     <section id="main-header">
-      <ul>
+      <h1 id="active"><i class="fas fa-bars"></i></h1>
+      <ul id="disable">
         <li><a href="./error.html">Works</a></li>
         <li><a href="./error.html">Blog</a></li>
         <li><a href="./error.html">Contact</a></li>
+        <li id="times"><i class="fas fa-times"></i></li>
       </ul>
 
       <nav id="navwrapper">
@@ -28,7 +30,7 @@
           <h1>Hi ✋✋✋, I am jatinsingh tomar, full stack webdeveloper</h1>
           <p>
             My major langauge is java scripts and minor langauge is python . I
-            have work with  varieties of language like java ,
+            have work with varieties of language like java ,
             c++,c,python,javascripts,php etc 🔥🔥🔥
           </p>
           <a href="" class="cta">Download resume</a>
@@ -147,4 +149,20 @@
       <span>&copy;All rights reserved to jatin singh tomar</span>
     </footer>
   </body>
+
+  <script>
+    const hamburger = document.querySelector("#active");
+    const wrong = document.querySelector("#times");
+    const ul = document.querySelector("#disable");
+    if (window.innerWidth <= 400) {
+      hamburger.addEventListener("click", () => {
+        ul.style.display = "flex";
+        hamburger.style.display = "none";
+      });
+      wrong.addEventListener("click", () => {
+        ul.style.display = "none";
+        hamburger.style.display = "block";
+      });
+    }
+  </script>
 </html>
