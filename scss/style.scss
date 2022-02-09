@@ -256,10 +256,11 @@ footer {
       }
 
       img {
-        border-radius: 10rem;
+        border-radius: 50rem;
         margin-left: 0;
         object-fit: cover;
         padding: 1rem;
+        max-width: 300px;
       }
     }
   }
