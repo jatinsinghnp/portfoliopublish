@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./scss/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <h1 id="active"><i class="fas fa-bars"></i></h1>
+
+    <ul id="disable">
+      <li><a href="./service.html" class="active-link">Works</a></li>
+      <li><a href="./Blog.html">Blog</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+      <li id="times"><i class="fas fa-times"></i></li>
+    </ul>
+
+    <div class="container">
+      <div class="card-services">
+        <img src="./img/1.jpg" alt="" />
+        <div class="card-content">
+          <h2>hellow</h2>
+          <div class="subtitle"><span></span> <span></span></div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum,
+            animi quas! Omnis earum maxime quia fugit sunt delectus, alias
+            consequatur non inventore, illum eius, tempore aut dolor ipsam
+            aperiam reprehenderit?
+          </p>
+        </div>
+      </div>
+      <div class="card-services">
+        <img src="./img/2.jpg" alt="" />
+        <div class="card-content">
+          <h2>hellow</h2>
+          <div class="subtitle"><span></span> <span></span></div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum,
+            animi quas! Omnis earum maxime quia fugit sunt delectus, alias
+            consequatur non inventore, illum eius, tempore aut dolor ipsam
+            aperiam reprehenderit?
+          </p>
+        </div>
+      </div>
+      <div class="card-services">
+        <img src="./img/3.jpg" alt="" />
+        <div class="card-content">
+          <h2>hellow</h2>
+          <div class="subtitle"><span></span> <span></span></div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum,
+            animi quas! Omnis earum maxime quia fugit sunt delectus, alias
+            consequatur non inventore, illum eius, tempore aut dolor ipsam
+            aperiam reprehenderit?
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <ul>
+        <li>
+          <a href=""><i class="fab fa-facebook-messenger"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="fab fa-instagram"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="fab fa-github"></i></a>
+        </li>
+      </ul>
+      <span>&copy;All rights reserved to jatin singh tomar</span>
+    </footer>
+  </body>
+  <script>
+    const hamburger = document.querySelector("#active");
+    const wrong = document.querySelector("#times");
+    const ul = document.querySelector("#disable");
+    if (window.innerWidth <= 400) {
+      hamburger.addEventListener("click", () => {
+        ul.style.display = "flex";
+        hamburger.style.display = "none";
+      });
+      wrong.addEventListener("click", () => {
+        ul.style.display = "none";
+        hamburger.style.display = "block";
+      });
+    }
+  </script>
+</html>
